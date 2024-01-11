@@ -4,7 +4,7 @@ function stringChop(str, chunkLength) {
 
 	
   for (let i = 0; i < str.length; i = i + chunkLength) {
-    const chunk = str.slice(i, i + chunkLength);
+    const chunk = str.substring(i, i + chunkLength);
     result.push(chunk);
   }
 
