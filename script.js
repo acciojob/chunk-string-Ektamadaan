@@ -2,8 +2,11 @@ function stringChop(str, chunkLength) {
   // your code here
 	const result = [];
 
-	
+	if (!Number.isInteger(chunkLength) || chunkLength <= 0) {
+    return result;
+  }
   for (let i = 0; i < str.length; i = i + chunkLength) {
+	  
     const chunk = str.substring(i, i + chunkLength);
     result.push(chunk);
   }
@@ -12,6 +15,8 @@ function stringChop(str, chunkLength) {
 }
 
 // Do not change the code below
+
 const str = prompt("Enter String.");
+
 const size = prompt("Enter Chunk Size.");
 alert(stringChop(str, size));
