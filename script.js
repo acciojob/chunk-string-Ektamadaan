@@ -3,7 +3,7 @@ function stringChop(str, chunkLength) {
 	const result = [];
 
 	
-  for (let i = 0; i < str.length; i += chunkLength) {
+  for (let i = 0; i < str.length; i = i + chunkLength) {
     const chunk = str.slice(i, i + chunkLength);
     result.push(chunk);
   }
